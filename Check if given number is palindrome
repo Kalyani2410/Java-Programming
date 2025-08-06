@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner obj=new Scanner(System.in);
+        int num=obj.nextInt();
+        int org=num;
+        int mod;
+        int pal=0;
+        int count=0;
+        while(num>0){
+            count++;
+         mod=num%10;
+        num/=10;
+        pal=(pal*10)+mod;
+        }
+        if(count==3){
+            if(pal==org){
+                System.out.println("palindrome");
+            }
+            else
+                System.out.println("not palindrome");
+        }
+        else
+            System.out.println("Invalid Input");
+        
+        
+    }
+    
+}

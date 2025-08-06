@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner obj=new Scanner(System.in);
+         int n=obj.nextInt();
+        int org=n;
+        int harsh=0;
+        int rem;
+        while(n>0){
+        rem=n%10;
+        n/=10;
+        harsh=harsh+rem;
+        }
+        if(org%harsh==0){
+            System.out.println("Harshad Number");
+        }
+        else
+            System.out.println("Not Harshad Number");
+    }
+}
+   

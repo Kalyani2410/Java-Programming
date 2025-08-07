@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int org=n;
+        int sum=0;
+       if(n>=100 && n<=999){
+           while(n>0){
+           int a=n%10;
+           n/=10;
+           int pow=a*a*a;
+           sum+=pow;
+        }
+           if(sum==org){
+           System.out.println("Yes");
+               }
+       }
+        else
+             System.out.println("No");
+    }
+}

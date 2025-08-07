@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int i=1;
+        if(n>=1 && n<=9){
+            
+            while(i<=n){
+                System.out.println(n+" x "+i+" = "+n*i);
+                i++;
+            }
+        }
+        else
+        System.out.println("Invalid Input");
+    }
+}

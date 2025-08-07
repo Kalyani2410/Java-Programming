@@ -11,7 +11,7 @@ public class Solution {
         Scanner obj=new Scanner(System.in);
         int n=obj.nextInt();
         int m=obj.nextInt();
-        if((n&m)>0 && (n&m)<30 && n<m){
+        if((n>0 && n<30)&&(m>0 && m<30)&& n<m){
             int sum=0;
             for(int i=n;i<=m;i++){
                 if(i%2==0){

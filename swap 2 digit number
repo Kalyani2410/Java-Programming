@@ -1,0 +1,47 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int org=n;
+        int temp=n;
+        int count=0;
+        int sum=0,add=0;
+        while(n>0){
+            n/=10;
+            count++;
+        }
+        if(count==1){
+            System.out.println("STDOUT");
+        }
+        else if(count==2){
+            while(org>0){
+            int a=org%10;
+            org/=10;
+            sum=(sum*10)+a;
+            }
+             System.out.println(sum);
+        }
+        else{
+            
+             while(temp>=100){
+               
+                 temp/=10;
+             }
+             while(temp>0){
+            int ela=temp%10;
+            temp/=10;
+            add=(add*10)+ela;
+            }
+             System.out.println(add);
+             
+        }
+    }
+}

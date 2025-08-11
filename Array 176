@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int arr[]=new int [n];
+        for(int i=0;i<n;i++){
+            arr[i]=obj.nextInt();
+        }
+        int f=obj.nextInt();
+        int check=-1;
+        for(int i=0;i<n;i++){
+        if(f==arr[i]){
+            check=i;
+        }
+        }
+       if(check==-1){
+         System.out.println("-1");
+       }
+        else
+            System.out.println("Door Number is 00"+check+"-DN");           
+    }}
+       

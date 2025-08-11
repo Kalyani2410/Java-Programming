@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+       Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=obj.nextInt();
+        }
+        Arrays.sort(arr);
+        ArrayList<Integer> ll=new ArrayList<Integer>();
+        ll.add(arr[0]);
+        for(int i=1;i<n;i++){
+            if(arr[i]!=arr[i-1]){
+                ll.add(arr[i]);
+            }
+         
+        }
+          int count=ll.size();
+        if(count==1){
+            System.out.printf("There are %d distinct element in the array.",count);
+        }
+        else
+        System.out.printf("There are %d distinct elements in the array.",count);
+    }
+}

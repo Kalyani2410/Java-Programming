@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=obj.nextInt();
+        }
+        int f=obj.nextInt();
+        int found=0;
+        for(int i=0;i<n;i++){
+            if(f==arr[i]){
+            found=1;
+        }
+        }
+        if(found==1){
+                System.out.printf("%d is presented in an array.",f);
+            }
+        else
+             System.out.printf("%d is not presented in an array.",f);
+        
+    }
+}

@@ -35,7 +35,7 @@ public class Solution {
             }
             
             
-            oddnum=odd[odd.length-2];
+            oddnum=odd[1];
         }
         int sum=evennum+oddnum;
         System.out.println("Sum="+sum);

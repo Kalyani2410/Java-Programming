@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */     Scanner obj=new Scanner(System.in);
+        String str=obj.nextLine();
+        String str1=str.toLowerCase();
+        char arr[]=str.toCharArray();
+        int dig=0,vowel=0,conso=0,spl=0;
+        for(int i=0;i<str1.length();i++){
+            char ch=str1.charAt(i);
+            if(ch>='a' && ch<='z'){
+            
+                if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+                    vowel++;
+                }
+                else
+                    conso++;
+            }
+                if(ch>='0' && ch<='9'){
+                    dig++;
+                }
+            else
+                
+                spl++;
+                
+            }
+        int spl1=spl-(vowel+conso);
+        System.out.println("vowels:"+vowel);
+        System.out.println("consonants:"+conso);
+        System.out.println("digits:"+dig);
+        System.out.println("special characters:"+spl1);
+        }
+        
+}

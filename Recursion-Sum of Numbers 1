@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        if(n>51){
+            System.out.println("Enter a Valid Input!!!!!!!!!!!!!!!!!!");
+        }
+      else {
+            int total = sum(1, n); 
+            System.out.println("The sum of numbers from 1 to " + n + " : 00" + total);
+        }
+    }
+
+    static int sum(int i, int n) {
+        if (i > n) {
+            return 0; 
+        }
+        return i + sum(i + 1, n); 
+    }
+}

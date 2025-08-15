@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+ public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+
+        if (n < 0 || n > 100000) {
+            System.out.println("Invalid Input");
+        } else {
+            if (isArmstrong(n))
+                System.out.println("yes");
+            else
+                System.out.println("no");
+        }
+    }
+
+    static boolean isArmstrong(int num) {
+        int temp = num;
+        int sum = 0;
+        int digits = String.valueOf(num).length();
+
+        while (temp > 0) {
+            int rem = temp % 10;
+            sum += Math.pow(rem, digits);
+            temp /= 10;
+        }
+
+        return sum == num;
+    }
+}
